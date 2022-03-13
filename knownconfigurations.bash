@@ -9,7 +9,7 @@
 ## DM=axel 		##  uncomment to use this download tool
 ## DM=curl		##  uncomment to use this download tool
 ## DM=lftp 		##  uncomment to use this download tool
-## DM=wget		##  uncomment to use this download tool
+DM=wget		##  uncomment to use this download tool
 ## DMVERBOSE="-v" 	##  uncomment for verbose download tool output with curl and wget;  For verbose output throughout runtime change this setting in file 'setupTermuxArch' also.
 ECHOEXEC=""		##  insert 'echo' to suppress most 'pacman' instructions from 'keys' file during runtime
 ECHOSYNC=""		##  insert 'echo' to only suppress 'pacman' syncing instructions from 'keys' file during runtime
@@ -18,8 +18,8 @@ USECACHEDIR=1		##  change to 0 to use cache directory;  When changed to 0 this i
 UNAMER="$(uname -r)"
 _AARCH64ANDROID_() {
 IFILE="ArchLinuxARM-aarch64-latest.tar.gz"
-CMIRROR="os.archlinuxarm.org"
-RPATH="os"
+CMIRROR="mirrors.tuna.tsinghua.edu.cn"
+RPATH="archlinuxarm/os"
 _MAKESYSTEM_
 }
 
